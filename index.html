@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      .menu-list {
+        position: absolute;
+        height: auto;
+        background-color: rgb(51, 30, 51);
+        width: 25%;
+        z-index: 5;
+        top: -100%;
+        transition: 1s;
+      }
+      #menu {
+        cursor: pointer;
+        position: relative;
+        /* z-index: 7; */
+      }
+      .menu-list.show {
+        top: 0%;
+        z-index: 2;
+      }
+      .menu-list.show li {
+        animation: fadeInLeft;
+        animation-duration: 2s;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        margin: 15px;
+        font-size: 20px;
+        color: white;
+      }
+      #close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+      }
+      h1 {
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+      }
+    </style>
+  </head>
+
+  <body>
+    <img src="./nkar.svg" alt="" id="menu" />
+    <div class="menu-list">
+      <img id="close" src="./close.svg" alt="" />
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Features</li>
+        <li>Contanct</li>
+        <li>Settings</li>
+      </ul>
+    </div>
+  </body>
+</html>
+<script src="./script.js"></script>
